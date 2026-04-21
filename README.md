@@ -4,8 +4,7 @@ A web app that gives farmers real-time pest and disease risk alerts based on cur
 
 Inspired by the community food work of organizations like [Persephone's Basket](https://persephonesbasket.org/), this tool is built for the growers behind local food systems who need early warnings before outbreaks damage their crops.
 
-**Live Demo**: [https://732198.github.io/farm-pest-alert](https://732198.github.io/farm-pest-alert)
-
+**Live Demo**: [https://github.com/732198/final-project-pest-alart/]
 ---
 
 ## Features
