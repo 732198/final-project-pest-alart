@@ -171,7 +171,7 @@ async function askClaude(weather) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-api-key': CLAUDE_API_KEY,
+'x-api-key': CONFIG.CLAUDE_API_KEY,
       'anthropic-version': '2023-06-01',
       'anthropic-dangerous-direct-browser-access': 'true'
     },
