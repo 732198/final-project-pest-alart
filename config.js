@@ -1,3 +1,3 @@
 const CONFIG = {
-  CLAUDE_API_KEY: 'your-key-here'
+  CLAUDE_API_KEY: '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'
 };
