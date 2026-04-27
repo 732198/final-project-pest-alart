@@ -192,16 +192,15 @@ var res = await fetch('/.netlify/functions/claude', {
 
 // ── RENDER RESULTS ──
 function renderResults(weather, result) {
+      document.getElementById('results-error').hidden = true;
   document.getElementById('results-loading').hidden = true;
   document.getElementById('results-content').hidden = false;
 
-  // risk banner
-  var level = result.risk.split(' ')[0].toLowerCase(); // "low", "medium", "high"
+  var level = result.risk.split(' ')[0].toLowerCase(); 
   var banner = document.getElementById('risk-banner');
   banner.className = 'risk-banner ' + level;
   document.getElementById('risk-level').textContent = result.risk;
 
-  // weather strip
   document.getElementById('weather-strip').innerHTML = weather.map(function(d) {
     var day = new Date(d.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short' });
     return '<div class="weather-day">'
@@ -212,18 +211,11 @@ function renderResults(weather, result) {
       + '</div>';
   }).join('');
 
-  // explanation
   document.getElementById('analysis-body').innerHTML = '<p>' + result.explanation + '</p>';
-
-  // action steps
   document.getElementById('action-list').innerHTML = result.actions
     .map(function(a) { return '<li>' + a + '</li>'; }).join('');
-
-  // timestamp
   document.getElementById('results-timestamp').textContent = 'Updated ' + new Date().toLocaleString();
 }
-
-// ── WEATHER ICON ──
 function weatherIcon(code) {
   if (code === 0)  return '☀️';
   if (code <= 2)   return '⛅';
@@ -235,5 +227,4 @@ function weatherIcon(code) {
   return '⛈️';
 }
 
-// ── START ──
 showView('home');
