@@ -1,6 +1,3 @@
-/* FarmGuard — style.css */
-
-/* ── VARIABLES ── */
 :root {
   --green-dark:  #1a3a2a;
   --green-mid:   #2d6a4f;
@@ -22,7 +19,6 @@
   --shadow-lg: 0 6px 24px rgba(28,28,26,.14);
 }
 
-/* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: var(--font-sans);
@@ -38,7 +34,6 @@ img, svg { display: block; }
 a { color: var(--green-mid); text-underline-offset: 3px; }
 a:hover { color: var(--green-dark); }
 
-/* ── HEADER ── */
 .site-header {
   display: flex;
   align-items: center;
@@ -73,7 +68,6 @@ a:hover { color: var(--green-dark); }
 .step-btn:not(:disabled):not(.active):hover { color: var(--cream); background: rgba(255,255,255,.08); }
 .step-divider { color: rgba(248,245,239,.25); font-size: .9rem; }
 
-/* ── LAYOUT ── */
 main {
   flex: 1;
   max-width: 640px;
@@ -82,7 +76,6 @@ main {
   padding: 2rem 1.25rem 3rem;
 }
 
-/* ── VIEWS ── */
 .view { display: none; }
 .view.active { display: block; animation: fadeUp .3s ease; }
 @keyframes fadeUp {
@@ -94,7 +87,6 @@ main {
 .view-title { font-family: var(--font-serif); font-size: 1.6rem; color: var(--green-dark); line-height: 1.2; }
 .view-subtitle { font-size: .875rem; color: var(--muted); margin-top: .2rem; }
 
-/* ── BACK BUTTON ── */
 .back-btn {
   display: flex;
   align-items: center;
@@ -114,7 +106,6 @@ main {
 }
 .back-btn:hover { border-color: var(--green-mid); color: var(--green-dark); }
 
-/* ── HERO ── */
 .hero { text-align: center; padding: 2.5rem 0 2rem; }
 .hero-eyebrow {
   font-size: .75rem;
@@ -134,7 +125,6 @@ main {
 .hero-title em { font-style: italic; color: var(--amber); }
 .hero-subtitle { font-size: 1rem; color: var(--muted); max-width: 480px; margin: 0 auto; }
 
-/* ── CARD ── */
 .card {
   background: var(--paper);
   border: 1px solid var(--border);
@@ -154,7 +144,6 @@ main {
   margin-bottom: 1rem;
 }
 
-/* ── FORM ── */
 .field { margin-bottom: 1.25rem; }
 .field-label { display: block; font-size: .875rem; font-weight: 600; margin-bottom: .5rem; }
 .input-row { display: flex; gap: .5rem; }
@@ -228,7 +217,6 @@ main {
 }
 .btn-secondary:hover { border-color: var(--green-mid); color: var(--green-dark); }
 
-/* ── TRUST BADGES ── */
 .trust-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-top: 1.5rem; }
 .trust-badge {
   font-size: .775rem;
@@ -239,8 +227,6 @@ main {
   border-radius: 100px;
   padding: .3rem .8rem;
 }
-
-/* ── CROP GRID ── */
 .crop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -265,7 +251,6 @@ main {
 .crop-name { font-size: .9rem; font-weight: 600; }
 .crop-risk-label { font-size: .7rem; color: var(--faint); font-weight: 500; }
 
-/* ── LOADING ── */
 .loading-state {
   display: flex;
   flex-direction: column;
@@ -284,12 +269,10 @@ main {
 .loading-text { font-weight: 600; color: var(--green-dark); }
 .loading-sub { font-size: .85rem; color: var(--muted); }
 
-/* ── ERROR ── */
 .error-state { display: flex; flex-direction: column; align-items: center; padding: 3rem 1rem; gap: .75rem; text-align: center; }
 .error-icon { font-size: 2rem; }
 .error-msg { color: var(--muted); max-width: 360px; }
 
-/* ── RISK BANNER ── */
 .risk-banner {
   display: flex;
   align-items: center;
@@ -309,7 +292,6 @@ main {
 .risk-banner.medium .risk-level-value { color: var(--yellow-risk); }
 .risk-banner.high   .risk-level-value { color: var(--red-risk); }
 
-/* ── WEATHER STRIP ── */
 .weather-strip {
   display: flex;
   gap: .5rem;
@@ -333,7 +315,6 @@ main {
 .weather-day-temp { font-size: .85rem; font-weight: 600; }
 .weather-day-rain { font-size: .7rem; color: var(--faint); margin-top: .15rem; }
 
-/* ── ANALYSIS & ACTIONS ── */
 .analysis-card, .actions-card { margin-bottom: 1rem; }
 .analysis-body { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 .analysis-body p + p { margin-top: .75rem; }
