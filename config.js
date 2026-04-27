@@ -1,0 +1,3 @@
+const CONFIG = {
+  CLAUDE_API_KEY: 'your-key-here'
+};
